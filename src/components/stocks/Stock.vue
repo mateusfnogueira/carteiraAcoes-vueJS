@@ -40,6 +40,7 @@ export default {
         stockPrice: this.stock.price,
         quantity: this.quantity,
       };
+      this.quantity = 0;
     },
   },
 };
