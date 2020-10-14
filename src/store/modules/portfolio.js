@@ -24,6 +24,10 @@ export default {
                 state.stocks.splice(state.stocks.indexOf(record), 1)
             }
             state.funds += stockPrice * quantity
+        },
+        setPortfolio(state, portfolio) {
+            state.funds = portfolio.funds
+            state.stocks = portfolio.stockPortfolio ? portfolio.stockPortfolio : []
         }
     },
     actions: {
@@ -34,7 +38,7 @@ export default {
     getters: {
         stockPortfolio(state, getters) {
             return state.stocks.map(stock => {
-                const record = getters.stock.find(element => element.id == stock.id)
+                const record = getters.stocks.find(element => element.id == stock.id)
                 return {
                     id: stock.id,
                     quantity: stock.quantity,

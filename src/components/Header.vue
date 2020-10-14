@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions } from 'vuex';
 
 export default {
   computed: {
@@ -53,13 +53,13 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["randomizeStocks", "loadData"]),
+    ...mapActions(['randomizeStocks', 'loadData']),
     endDay() {
       this.randomizeStocks();
     },
     saveData() {
       const { funds, stockPortfolio, stocks } = this.$store.getters;
-      this.$http.put("data.json", { funds, stockPortfolio, stocks });
+      this.$http.put('data.json', { funds, stockPortfolio, stocks });
     },
     loadDataLocal() {
       this.loadData();
