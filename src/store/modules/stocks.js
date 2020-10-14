@@ -1,4 +1,4 @@
-import stocksBD from '@/data/stocksBD'
+import stocks from '@/data/stocksBD'
 
 export default {
     state: {
@@ -6,7 +6,7 @@ export default {
     },
     mutations: {
         setStocks(state, stocks) {
-            state.stock = stocks
+            state.stocks = stocks
         }
     },
     actions: {
@@ -14,10 +14,10 @@ export default {
             commit('buyStock', order)
         },
         initStocks({ commit }) {
-            commit('setStocks', stocksBD)
+            commit('setStocks', stocks)
         }
     },
-    getter: {
+    getters: {
         stocks(state) {
             return state.stocks
         }

@@ -1,8 +1,6 @@
-import { stat } from "fs"
-
 export default {
     state: {
-        funds: 1000,
+        funds: 10000,
         stocks: []
     },
     mutations: {

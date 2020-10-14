@@ -1,11 +1,12 @@
 <template>
-    <v-row wrap>
+    <v-layout row wrap>
         <Stock v-for="stock in stocks" :key="stock.id" :stock="stock" />
-    </v-row>
+    </v-layout>
 </template>
 
 <script>
 import Stock from './Stock'
+
 export default {
     components: { Stock },
     computed: {
