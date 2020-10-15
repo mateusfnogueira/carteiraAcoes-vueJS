@@ -15,7 +15,7 @@ jobs:
         env:
           email: 'mateusfnogueira@outlook.com'
           username: 'mateusfnogueira'
-          access_token: '00f6866e1254a27ccc0b0a3cde8de3b6a1a60e22'
+          access_token: '98292d45df6faf8524c2587585572a7f065d1f57'
         run: |
           git config --global credential.helper store
           echo "https://${access_token}:x-oauth-basic@github.com" > ~/.git-credentials
